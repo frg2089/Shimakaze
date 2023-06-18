@@ -6,7 +6,7 @@ public abstract class MessageBuilder
 {
     public abstract MessageBuilder Add(IMessageBlock span);
     public abstract MessageBuilder Text(string message);
-    public abstract MessageBuilder At(uint uin);
+    public abstract MessageBuilder At(string id);
     public abstract MessageBuilder Image(byte[] data);
     public virtual MessageBuilder Image(string filePath) => Image(File.ReadAllBytes(filePath));
     public abstract MessageBuilder Face(int faceId);
