@@ -1,6 +1,6 @@
 using Shimakaze.Message.Block;
 
-namespace Shimakaze.Events;
+namespace Shimakaze.Event;
 
 public static class MessageEventArgsExtensions
 {

@@ -1,4 +1,4 @@
-namespace Shimakaze.Events;
+namespace Shimakaze.Event;
 
 public interface IIMEventArgs
 {

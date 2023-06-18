@@ -1,6 +1,6 @@
 using Shimakaze.Message;
 
-namespace Shimakaze.Events;
+namespace Shimakaze.Event;
 
 public interface IMessageEventArgs : IIMEventArgs
 {

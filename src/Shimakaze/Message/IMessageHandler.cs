@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-using Shimakaze.Events;
+using Shimakaze.Event;
 
 namespace Shimakaze.Message;
 

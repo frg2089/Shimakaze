@@ -1,6 +1,6 @@
 using Shimakaze.Model;
 
-namespace Shimakaze.Events;
+namespace Shimakaze.Event;
 
 public interface IOperatorEventArgs : IIMEventArgs
 {

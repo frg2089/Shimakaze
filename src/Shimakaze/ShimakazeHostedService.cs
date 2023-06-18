@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-using Shimakaze.Events;
+using Shimakaze.Event;
 using Shimakaze.Message;
 
-namespace Shimakaze.Konata;
+namespace Shimakaze;
 
 public sealed class ShimakazeHostedService : IHostedService
 {

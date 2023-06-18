@@ -1,4 +1,4 @@
-using Shimakaze.Events;
+using Shimakaze.Event;
 using Shimakaze.Message;
 using Shimakaze.Model;
 
