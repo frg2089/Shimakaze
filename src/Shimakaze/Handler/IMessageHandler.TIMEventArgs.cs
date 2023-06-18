@@ -1,6 +1,6 @@
 using Shimakaze.Event;
 
-namespace Shimakaze.Message;
+namespace Shimakaze.Handler;
 public interface IMessageHandler<in TIMEventArgs> : IMessageHandler
     where TIMEventArgs : IIMEventArgs
 {

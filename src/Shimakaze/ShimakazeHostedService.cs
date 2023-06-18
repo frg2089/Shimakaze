@@ -3,11 +3,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 using Shimakaze.Event;
-using Shimakaze.Message;
+using Shimakaze.Handler;
 
 namespace Shimakaze;
 
-public sealed class ShimakazeHostedService : IHostedService
+internal sealed class ShimakazeHostedService : IHostedService
 {
     private readonly IMProvider _im;
     private readonly ILogger<ShimakazeHostedService> _logger;

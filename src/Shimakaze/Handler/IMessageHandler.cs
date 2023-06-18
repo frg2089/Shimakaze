@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 using Shimakaze.Event;
 
-namespace Shimakaze.Message;
+namespace Shimakaze.Handler;
 
 [EditorBrowsable(EditorBrowsableState.Never)]
 public interface IMessageHandler
