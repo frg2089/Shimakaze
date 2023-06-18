@@ -42,7 +42,7 @@ public sealed class ShimakazeHostedService : IHostedService
         await _im.LogoutAsync(cancellationToken);
     }
 
-    private async void OnIMEvent(IMProvider sender, IMEventArgs args)
+    private async void OnIMEvent(IMProvider sender, IIMEventArgs args)
     {
         _logger.LogDebug("IM Event: {args}", args);
 

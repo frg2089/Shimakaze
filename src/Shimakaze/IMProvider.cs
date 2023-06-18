@@ -10,6 +10,7 @@ public abstract class IMProvider
 
     public IUser Me { get; }
     public event IMEventHandler? Event;
+    protected void OnEvent(IIMEventArgs args) => Event?.Invoke(this, args);
     public abstract Task SendFriendAsync(uint id, MessageBuilder message);
     public abstract Task SendGroupAsync(uint id, MessageBuilder message);
     public abstract Task<bool> LoginAsync(CancellationToken cancellationToken = default);
