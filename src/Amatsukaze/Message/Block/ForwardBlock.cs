@@ -2,7 +2,7 @@
 
 namespace Amatsukaze.Message.Block;
 
-public sealed record class ForwardBlock
+public sealed record class ForwardBlock : MessageBlock
 {
     public static implicit operator ForwardBlock(CqForwardMsg msg) => new();
 }

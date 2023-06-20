@@ -4,7 +4,7 @@ using Shimakaze.Message.Block;
 
 namespace Amatsukaze.Message.Block;
 
-public sealed record class XmlBlock : IStringBaseBlock
+public sealed record class XmlBlock : MessageBlock, IStringBaseBlock
 {
     public required string Content { get; init; }
 

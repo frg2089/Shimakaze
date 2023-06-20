@@ -2,7 +2,7 @@
 
 namespace Amatsukaze.Message.Block;
 
-// public sealed record class ShakeBlock
+// public sealed record class ShakeBlock : MessageBlock
 // {
 //     public static implicit operator ShakeBlock(CqShakeMsg msg) => new();
 // }

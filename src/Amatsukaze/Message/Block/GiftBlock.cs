@@ -2,7 +2,7 @@
 
 namespace Amatsukaze.Message.Block;
 
-public sealed record class GiftBlock
+public sealed record class GiftBlock : MessageBlock
 {
     public static implicit operator GiftBlock(CqGiftMsg msg) => new();
 }

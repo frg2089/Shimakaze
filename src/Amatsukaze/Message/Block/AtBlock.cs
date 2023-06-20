@@ -7,7 +7,7 @@ using Shimakaze.Model;
 
 namespace Amatsukaze.Message.Block;
 
-public sealed record class AtBlock : IAtBlock
+public sealed record class AtBlock : MessageBlock, IAtBlock
 {
     public required CqHttpUser User { get; init; }
 
