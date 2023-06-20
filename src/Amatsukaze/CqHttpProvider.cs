@@ -1,4 +1,4 @@
-using Amatsukaze.Events;
+using Amatsukaze.Event;
 
 using EleCho.GoCqHttpSdk;
 using EleCho.GoCqHttpSdk.Post;
@@ -74,11 +74,7 @@ public sealed class CqHttpProvider : IMProvider
                 //case CqPokeNoticedPostContext cqPN:
                 //    break;
                 case CqPrivateMessagePostContext cqPM:
-                    OnEvent(new PrivateMessageEventArgs()
-                    {
-                        User = cqPM.Sender,
-                        Message = cqPM.Message
-                    });
+                    OnEvent((PrivateMessageEventArgs)cqPM);
                     break;
             }
             await next();
