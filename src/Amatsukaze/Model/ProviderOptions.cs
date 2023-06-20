@@ -2,7 +2,7 @@
 
 namespace Amatsukaze.Model;
 
-public sealed record class CqHttpProviderOptions
+public sealed record class ProviderOptions
 {
     public Uri? BaseUri { get; set; }
     public bool UseApiEndPoint { get; set; }
@@ -10,5 +10,5 @@ public sealed record class CqHttpProviderOptions
     public string? AccessToken { get; set; }
     public int BufferSize { get; set; }
     [Required]
-    public CqHttpUser? Account { get; set; }
+    public User? Account { get; set; }
 }

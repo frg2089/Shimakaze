@@ -9,7 +9,7 @@ namespace Amatsukaze.Message.Block;
 
 public sealed record class AtBlock : MessageBlock, IAtBlock
 {
-    public required CqHttpUser User { get; init; }
+    public required User User { get; init; }
 
     IUser IAtBlock.User => User;
 
@@ -21,4 +21,5 @@ public sealed record class AtBlock : MessageBlock, IAtBlock
             NickName = msg.Name ?? string.Empty,
         }
     };
+    public static implicit operator CqAtMsg(AtBlock block) => new(block.User.Uid);
 }

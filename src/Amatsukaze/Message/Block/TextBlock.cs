@@ -12,4 +12,6 @@ public sealed record class TextBlock : MessageBlock, ITextBlock
     {
         Content = msg.Text
     };
+
+    public static implicit operator CqTextMsg(TextBlock msg) => msg.Content;
 }

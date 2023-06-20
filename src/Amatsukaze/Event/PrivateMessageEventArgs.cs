@@ -12,7 +12,7 @@ public sealed record class PrivateMessageEventArgs : IMEventArgs, IUserEventArgs
 {
     public Message.Message? Message { get; init; }
 
-    public required CqHttpUser User { get; init; }
+    public required User User { get; init; }
 
     IUser IUserEventArgs.User => User;
 

@@ -6,13 +6,19 @@ using Shimakaze.Model;
 
 namespace Amatsukaze.Model;
 
-public sealed record class CqHttpUser : IUser
+public sealed record class User : IUser
 {
-    public string Id { get; init; } = string.Empty;
+    internal readonly long Uid;
+
+    public string Id
+    {
+        get => Uid.ToString();
+        init => Uid = long.Parse(value);
+    }
     public string NickName { get; init; } = string.Empty;
     public Uri? Avatar => new($"https://q1.qlogo.cn/g?b=qq&nk={Id}&s=0");
 
-    public static implicit operator CqHttpUser(CqMessageSender sender) => new()
+    public static implicit operator User(CqMessageSender sender) => new()
     {
         Id = sender.UserId.ToString(),
         NickName = sender.Nickname,

@@ -9,11 +9,11 @@ using Shimakaze.Message;
 
 namespace Amatsukaze;
 
-public sealed class CqHttpProvider : IMProvider
+public sealed class Provider : IMProvider
 {
     private readonly CqWsSession _session;
 
-    public CqHttpProvider(CqHttpProviderOptions options) : base(options.Account!)
+    public Provider(ProviderOptions options) : base(options.Account!)
     {
         _session = new(new()
         {
@@ -89,12 +89,12 @@ public sealed class CqHttpProvider : IMProvider
         return true;
     }
 
-    public override Task SendFriendAsync(uint id, MessageBuilder message)
+    public override Task SendFriendAsync(uint id, IMessageBuilder message)
     {
         throw new NotImplementedException();
     }
 
-    public override Task SendGroupAsync(uint id, MessageBuilder message)
+    public override Task SendGroupAsync(uint id, IMessageBuilder message)
     {
         throw new NotImplementedException();
     }
