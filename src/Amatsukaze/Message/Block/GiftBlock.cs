@@ -4,5 +4,5 @@ namespace Amatsukaze.Message.Block;
 
 public sealed record class GiftBlock
 {
-    public static implicit operator GiftBlock(CqGiftMsg msg)=> ;
+    public static implicit operator GiftBlock(CqGiftMsg msg) => new();
 }
