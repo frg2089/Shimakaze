@@ -11,8 +11,8 @@ public abstract class IMProvider
     public IUser Me { get; }
     public event IMEventHandler? Event;
     protected void OnEvent(IIMEventArgs args) => Event?.Invoke(this, args);
-    public abstract Task SendFriendAsync(uint id, MessageBuilder message);
-    public abstract Task SendGroupAsync(uint id, MessageBuilder message);
+    public abstract Task SendFriendAsync(uint id, IMessageBuilder message);
+    public abstract Task SendGroupAsync(uint id, IMessageBuilder message);
     public abstract Task<bool> LoginAsync(CancellationToken cancellationToken = default);
     public abstract Task<bool> LogoutAsync(CancellationToken cancellationToken = default);
 }

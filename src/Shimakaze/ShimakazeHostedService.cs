@@ -38,7 +38,7 @@ internal sealed class ShimakazeHostedService : IHostedService
 
     public async Task StopAsync(CancellationToken cancellationToken)
     {
-        await _cancellationTokenSource.CancelAsync();
+        _cancellationTokenSource.Cancel();
         await _im.LogoutAsync(cancellationToken);
     }
 

@@ -10,6 +10,6 @@ public static class MessageBlocksExtensions
     public static bool Has<TBlock>(this IEnumerable<IMessageBlock> message) where TBlock : IMessageBlock => message.Any(i => i is TBlock);
     public static bool Has<TBlock>(this IEnumerable<IMessageBlock> message, Func<TBlock, bool> matcher) where TBlock : IMessageBlock => message.Any(i => i is TBlock t && matcher(t));
 
-    public static TBlock? Get<TBlock>(this IEnumerable<IMessageBlock> message) where TBlock : IMessageBlock => (TBlock?)message.FirstOrDefault(i => i is TBlock);
-    public static TBlock? Get<TBlock>(this IEnumerable<IMessageBlock> message, Func<TBlock, bool> matcher) where TBlock : IMessageBlock => (TBlock?)message.FirstOrDefault(i => i is TBlock t && matcher(t));
+    public static TBlock? Get<TBlock>(this IEnumerable<IMessageBlock> message) where TBlock : IMessageBlock => message.Where(i => i is TBlock).Cast<TBlock>().FirstOrDefault();
+    public static TBlock? Get<TBlock>(this IEnumerable<IMessageBlock> message, Func<TBlock, bool> matcher) where TBlock : IMessageBlock => message.Where(i => i is TBlock t && matcher(t)).Cast<TBlock>().FirstOrDefault();
 }
