@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="EleCho.GoCqHttpSdk" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0-preview.4.23259.5" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,7 +4,7 @@ using EleCho.GoCqHttpSdk.Message;
 using Shimakaze.Message;
 using Shimakaze.Model;
 
-namespace Amatsukaze;
+namespace Amatsukaze.Model;
 
 public sealed record class CqHttpUser : IUser
 {

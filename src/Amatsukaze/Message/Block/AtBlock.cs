@@ -1,4 +1,6 @@
-﻿using EleCho.GoCqHttpSdk.Message;
+﻿using Amatsukaze.Model;
+
+using EleCho.GoCqHttpSdk.Message;
 
 using Shimakaze.Message.Block;
 using Shimakaze.Model;

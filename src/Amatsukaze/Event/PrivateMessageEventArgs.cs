@@ -1,4 +1,6 @@
-﻿using EleCho.GoCqHttpSdk.Post;
+﻿using Amatsukaze.Model;
+
+using EleCho.GoCqHttpSdk.Post;
 
 using Shimakaze.Event;
 using Shimakaze.Message;

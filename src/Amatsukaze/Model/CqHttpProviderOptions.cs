@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Amatsukaze;
+namespace Amatsukaze.Model;
 
 public sealed record class CqHttpProviderOptions
 {
