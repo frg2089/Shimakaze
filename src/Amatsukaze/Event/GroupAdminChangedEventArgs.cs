@@ -2,7 +2,7 @@
 
 namespace Amatsukaze.Event;
 
-public sealed record class GroupAdminChangedEventArgs : IMEventArgs
-{
-    public static implicit operator GroupAdminChangedEventArgs(CqGroupAdminChangedPostContext ctx)=> ;
-}
+// public sealed record class GroupAdminChangedEventArgs : IMEventArgs
+// {
+//     public static implicit operator GroupAdminChangedEventArgs(CqGroupAdminChangedPostContext ctx) => new();
+// }

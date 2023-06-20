@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class GroupRequestEventArgs : IMEventArgs
 {
-    public static implicit operator GroupRequestEventArgs(CqGroupRequestPostContext ctx)=> ;
+    public static implicit operator GroupRequestEventArgs(CqGroupRequestPostContext ctx) => new();
 }

@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class LifecycleEventArgs : IMEventArgs
 {
-    public static implicit operator LifecycleEventArgs(CqLifecyclePostContext ctx)=> ;
+    public static implicit operator LifecycleEventArgs(CqLifecyclePostContext ctx) => new();
 }

@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class GroupFileUploadedEventArgs : IMEventArgs
 {
-    public static implicit operator GroupFileUploadedEventArgs(CqGroupFileUploadedPostContext ctx)=> ;
+    public static implicit operator GroupFileUploadedEventArgs(CqGroupFileUploadedPostContext ctx) => new();
 }

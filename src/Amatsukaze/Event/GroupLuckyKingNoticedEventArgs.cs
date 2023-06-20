@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class GroupLuckyKingNoticedEventArgs : IMEventArgs
 {
-    public static implicit operator GroupLuckyKingNoticedEventArgs(CqGroupLuckyKingNoticedPostContext ctx)=> ;
+    public static implicit operator GroupLuckyKingNoticedEventArgs(CqGroupLuckyKingNoticedPostContext ctx) => new();
 }

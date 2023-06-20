@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class FriendRequestEventArgs : IMEventArgs
 {
-    public static implicit operator FriendRequestEventArgs(CqFriendRequestPostContext ctx)=> ;
+    public static implicit operator FriendRequestEventArgs(CqFriendRequestPostContext ctx) => new();
 }

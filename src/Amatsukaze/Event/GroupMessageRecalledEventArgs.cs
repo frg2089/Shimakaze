@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class GroupMessageRecalledEventArgs : IMEventArgs
 {
-    public static implicit operator GroupMessageRecalledEventArgs(CqGroupMessageRecalledPostContext ctx)=> ;
+    public static implicit operator GroupMessageRecalledEventArgs(CqGroupMessageRecalledPostContext ctx) => new();
 }

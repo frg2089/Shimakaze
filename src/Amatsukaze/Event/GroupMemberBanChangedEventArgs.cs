@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class GroupMemberBanChangedEventArgs : IMEventArgs
 {
-    public static implicit operator GroupMemberBanChangedEventArgs(CqGroupMemberBanChangedPostContext ctx)=> ;
+    public static implicit operator GroupMemberBanChangedEventArgs(CqGroupMemberBanChangedPostContext ctx) => new();
 }

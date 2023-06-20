@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class OfflineFileUploadedEventArgs : IMEventArgs
 {
-    public static implicit operator OfflineFileUploadedEventArgs(CqOfflineFileUploadedPostContext ctx)=> ;
+    public static implicit operator OfflineFileUploadedEventArgs(CqOfflineFileUploadedPostContext ctx) => new();
 }

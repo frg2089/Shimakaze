@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class GroupEssenceChangedEventArgs : IMEventArgs
 {
-    public static implicit operator GroupEssenceChangedEventArgs(CqGroupEssenceChangedPostContext ctx)=> ;
+    public static implicit operator GroupEssenceChangedEventArgs(CqGroupEssenceChangedPostContext ctx) => new();
 }

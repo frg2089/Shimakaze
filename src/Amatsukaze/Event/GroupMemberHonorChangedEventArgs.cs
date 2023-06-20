@@ -6,5 +6,5 @@ namespace Amatsukaze.Event;
 
 public sealed record class GroupMemberHonorChangedEventArgs : IMEventArgs
 {
-    public static implicit operator GroupMemberHonorChangedEventArgs(CqGroupMemberHonorChangedPostContext ctx)=> ;
+    public static implicit operator GroupMemberHonorChangedEventArgs(CqGroupMemberHonorChangedPostContext ctx) => new();
 }
