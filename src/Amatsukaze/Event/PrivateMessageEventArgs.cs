@@ -10,14 +10,17 @@ namespace Amatsukaze.Event;
 
 public sealed record class PrivateMessageEventArgs : IMEventArgs, IUserEventArgs, IMessageEventArgs
 {
-    public IMessage? Message { get; init; }
+    public Message.Message? Message { get; init; }
 
     public required CqHttpUser User { get; init; }
 
     IUser IUserEventArgs.User => User;
-    public static implicit operator PrivateMessageEventArgs(CqPrivateMessagePostContext ctx) => new ()
+
+    IMessage? IMessageEventArgs.Message => Message;
+
+    public static implicit operator PrivateMessageEventArgs(CqPrivateMessagePostContext ctx) => new()
     {
         User = ctx.Sender,
-        Message = ctx.Message
+        Message = ctx.Message,
     };
 }
